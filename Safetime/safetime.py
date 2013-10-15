@@ -5,19 +5,19 @@ import time
 from daemon import runner
 
 
-# Create the daemon object
+# Função main
 def main():
     notifier = Runner()
     daemon_runner = runner.DaemonRunner(notifier)
     daemon_runner.do_action()
 
 
-# Function to notify
+# Função de notificação
 def notification():
     os.system('notify-send \'1 hora de utilização\' \'Descansar.\'')
 
 
-# Function to shows the succeed to activate the notification
+# Função de notificação de sucesso na ativação do notificador
 def success():
     os.system('notify-send \'Notificador ativado\'')
 
